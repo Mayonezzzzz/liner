@@ -1,0 +1,157 @@
+.special-offer {
+  background-color: @basic-grey;
+  padding: 10px;
+  padding-bottom: 20px;
+}
+
+.special-offer__header {
+  font-size: 1.2em;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.special-offer__text {
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.special-offer__card {
+  padding-bottom: 15px;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 2px 4px 6px @form-border;
+
+  @media (min-width: @tablet-width) {
+    width: 500px;
+    margin: 0 auto;
+  }
+}
+
+.special-offer__picture{
+  margin: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.special-offer__info {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.special-offer__image {
+  min-width: 275px;
+  width: 100%;
+  min-height: 200px;
+  max-height: 500px;
+  display: block;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  z-index: 1;
+  object-fit: cover;
+}
+
+.special-offer__title {
+  font-size: 1.1em;
+  margin: 0;
+  width: 170px;
+  height: 40px;
+  background-color: @green-opacity;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-right-radius: 7px;
+  overflow: hidden;
+}
+
+.special-offer__link {
+  text-decoration: none;
+  color: @basic-grey;
+}
+
+.special-offer__out {
+  display: flex;
+  flex-wrap: wrap;
+  height: 55px;
+  align-content: space-between;
+  padding: 5px 15px;
+  background-color: @basic-blue-opacity;
+  color: @basic-white;
+
+  .special-offer__text {
+    margin: 0;
+    font-size: 1em;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+.special-offer__timer {
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.special-offer__price {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+.special-offer__price-old,.special-offer__price-new {
+  width: 50%;
+  margin: 15px 0;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.special-offer__price-old {
+  text-decoration: line-through;
+}
+
+.special-offer__button {
+  .button();
+  width: 240px;
+  height: 50px;
+  font-size: 1.1em;
+}
+
+.special-offer__other-offers {
+  .button();
+  background-color: @basic-green;
+  height: 55px;
+  width: 230px;
+  display: block;
+  font-size: 0.9em;
+  font-weight: 300;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 auto;
+  border: @basic-green;
+  margin-top: 20px;
+  padding: 5px;
+  padding-top: 10px;
+
+  &:hover {
+    background-color: @green-opacity-button;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 475px;
+    height: 30px;
+    }
+
+  @media (min-width: @desktop-width) {
+    font-weight: 700;
+  }
+}

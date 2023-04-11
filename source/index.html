@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <title>liner</title>
+</head>
+
+<body class="page__body">
+
+  <header class="header">
+    <div class="header__logo-container">
+      <div class="header__logo-wrapper">
+        <div class="header__link-container">
+          <a href="#">
+            <img src="img/logo-miniliner.png" height="60" width="235" alt="Логотип сайта Минилайнер">
+          </a>
+          <a class="header__menu-toggle header__menu-toggle--closed" href="#"></a>
+        </div>
+
+        <div class="header__social-container">
+          <ul class="header__social-list">
+            <li class="social-list__item">
+              <a class="social-list__link" href="#">
+                <svg class="social-list__logo--vk social-list__logo" width="30" height="18" viewBox="0 0 30 18">
+                  <use xlink:href="img/icons/sprite.svg#vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a class="social-list__link" href="#">
+                <svg class="social-list__logo social-list__logo--inst" width="30" height="30" viewBox="0 0 30 30">
+                  <use xlink:href="img/icons/sprite.svg#instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a class="social-list__link" href="#">
+                <svg class="social-list__logo social-list__logo--fb" width="30" height="30" viewBox="0 0 30 30">
+                  <use xlink:href="img/icons/sprite.svg#fb"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+
+          <a class="header__phone" href="tel:+74957239825">+7 (495) 723 - 98 - 25</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="header__navigation-wrapper">
+      <nav class="header__navigation">
+        <ul class="header__navigation-list">
+          <li class="header__navigation-item">
+            <a href="#" class="header__navigation-link">Контакты</a>
+          </li>
+          <li class="header__navigation-item">
+            <a href="#" class="header__navigation-link">Оплата</a>
+          </li>
+          <li class="header__navigation-item">
+            <a href="#" class="header__navigation-link">Доставка</a>
+          </li>
+          <li class="header__navigation-item">
+            <a href="#" class="header__navigation-link">Регистрация</a>
+          </li>
+          <li class="header__navigation-item">
+            <a href="#" class="header__navigation-link">Вход</a>
+          </li>
+          <li class="header__navigation-item">
+            <a href="#" class="header__navigation-link">Мои заказы</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+  </header>
+
+  <main class="main">
+
+    <section class="search">
+      <form class="form__search" action="#" method="get">
+        <fieldset class="form__search-set">
+          <legend class="form__search-title">Поиск нужной модели:</legend>
+
+          <ul class="form__search-list">
+            <li class="form__search-item">
+              <input class="form__search-name" type="text" name="name" placeholder="Любое слово или фраза">
+            </li>
+            <li class="form__search-item">
+              <select name="models" id="models" class="form__search-select">
+                <option value="">Тип модели</option>
+                <option value="all">Все типы</option>
+                <option value="metal">Самолеты из металла</option>
+                <option value="plastic">Самолеты из пластика</option>
+                <option value="resin">Самолеты из смолы</option>
+                <option value="stands">Подставки и подложки</option>
+                <option value="airport">Аэропорты</option>
+              </select>
+            </li>
+            <li class="form__search-item">
+              <select name="scale" id="scale" class="form__search-select">
+                <option value="">Масштаб</option>
+                <option value="all">Все масштабы</option>
+                <option value="32">1:32</option>
+                <option value="48">1:48</option>
+                <option value="72">1:72</option>
+                <option value="100">1:100</option>
+                <option value="125">1:125</option>
+                <option value="144">1:144</option>
+                <option value="200">1:200</option>
+                <option value="250">1:250</option>
+                <option value="400">1:400</option>
+                <option value="500">1:500</option>
+              </select>
+            </li>
+            <li class="form__search-item">
+              <select name="airline" id="airline" class="form__search-select">
+                <option value="">Авиакомпания</option>
+                <option value="all">Все авиакомпании</option>
+                <option value="aurora">Аврора</option>
+                <option value="azimuth">Азимут</option>
+                <option value="azurair">Азур Эйр</option>
+              </select>
+            </li>
+            <li class="form__search-item">
+              <select name="aircraft" id="aircraft" class="form__search-select">
+                <option value="">Марка самолета</option>
+                <option value="all">Все самолеты</option>
+                <option value="an-12">Антонов Ан-12</option>
+                <option value="an-124">Антонов Ан-124 Руслан</option>
+                <option value="an-148">Антонов Ан-148</option>
+              </select>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="form__search-submit" type="submit">Найти</button>
+      </form>
+
+      <form class="form__order" action="" method="post">
+        <fieldset class="form__order-set">
+          <legend class="form__order-title">Где мой заказ?</legend>
+          <div class="form__order-container">
+            <p class="form__order-text">Быстрое отслеживание заказов:</p>
+            <input class="form__order-request" type="text" name="email" id="check_order_input"
+              placeholder="№ заказа или E-mail">
+          </div>
+        </fieldset>
+        <button class="form__order-submit" type="submit">Узнать</button>
+      </form>
+    </section>
+
+    <section class="finished-models">
+      <div class="finished-models__scale-wrapper">
+        <h2 class="finished-models__header">
+          Готовые масштабные модели пассажирских самолетов
+        </h2>
+        <p class="finished-models__text">Популярные масштабы:</p>
+        <ul class="finished-models__scale-list">
+          <li class="finished-models__scale-item">
+            <a class="finished-models__scale-link" href="#">1:100</a>
+          </li>
+          <li class="finished-models__scale-item">
+            <a class="finished-models__scale-link" href="#">1:200</a>
+          </li>
+          <li class="finished-models__scale-item">
+            <a class="finished-models__scale-link" href="#">1:400</a>
+          </li>
+          <li class="finished-models__scale-item">
+            <a class="finished-models__scale-link" href="#">1:500</a>
+          </li>
+          <li class="finished-models__scale-item">
+            <a class="finished-models__scale-link" href="#">Подобрать модель по размеру</a>
+          </li>
+        </ul>
+
+      </div>
+
+      <div class="finished-models__info">
+        <div class="finished-models__choise">
+          <a href="#" class="finished-models__choise-header">Какую модель выбрать?</a>
+          <p class="finished-models__text finished-models__choise-text">Коротко и ясно о том, как разобраться в большом
+            количестве коллекционных моделей самолетов на сайте. </p>
+        </div>
+        <div class="finished-models__sale">
+          <a class="finished-models__sale-header" href="#">Как купить дешевле?</a>
+          <p class="finished-models__text finished-models__scale-text">Постоянным покупателям – скидки! Бонусная
+            программа интернет-магазина готовых моделей самолетов «Минилайнер».</p>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="special-offer">
+      <h2 class="special-offer__header">Модель дня</h2>
+      <p class="special-offer__text">Одна модель самолета каждый день продается по промоцене. Скидка 10%!</p>
+      <div class="special-offer__card">
+        <div class="special-offer__picture">
+          <img class="special-offer__image" src="img/b737-800-skyup.jpg" width="275" alt="Модель по акционной цене">
+          <div class="special-offer__info">
+            <h3 class="special-offer__title">
+              <a class="special-offer__link" href="#">Boeing 737-800</a>
+            </h3>
+            <div class="special-offer__out">
+              <p class="special-offer__text">До конца акции осталось: </p>
+              <span class="special-offer__timer" id="timer">08:59:01</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="special-offer__price">
+          <p class="special-offer__price-old">2700 &#8381;</p>
+          <p class="special-offer__price-new">2430 &#8381;</p>
+          <button class="special-offer__button" type="button">
+            Купить
+          </button>
+        </div>
+
+      </div>
+
+      <a class="special-offer__other-offers" href="#">Другие спецпредложения на модели</a>
+
+    </section>
+
+    <section class="receipts">
+      <h2 class="receipts__header">Новые поступления</h2>
+      <p class="receipts__text">Новые модели самолетов, поступившие в продажу в последние несколько месяцев.</p>
+      <div class="receipts__new-models">
+        <h3 class="new-models__header">Новые модели фирм-производителей:</h3>
+        <ul class="new-models__list">
+          <li class="new-models__item">
+            <a href="#">AviaBoss</a>
+          </li>
+          <li class="new-models__item">
+            <a href="#">Gemini Jets</a>
+          </li>
+          <li class="new-models__item">
+            <a href="#">JC Wings</a>
+          </li>
+          <li class="new-models__item">
+            <a href="#">Herpa (Херпа)</a>
+          </li>
+          <li class="new-models__item">
+            <a href="#">Hogan (Хоган)</a>
+          </li>
+          <li class="new-models__item">
+            <a href="#">Phoenix</a>
+          </li>
+          <li class="new-models__item">
+            <a href="#">Inflight 200</a>
+          </li>
+        </ul>
+      </div>
+      <ul class="receipts__list">
+        <li class="receipts__item">
+          <div class="receipts__card">
+            <a class="receipts__card-link" href="#">
+              <img class="receipts__card-image" src="img/herpa-wings-572170-A321neoLR-luftwaffe.jpg" width="275" alt="">
+            </a>
+            <div class="receipts__info">
+              <a class="receipts__info-link" href="#">
+                <p class="receipts__info-name">Airbus A321neo LR</p>
+                <p class="receipts__info-scale">1:200 Herpa (Херпа)</p>
+              </a>
+            </div>
+            <button class="receipts__button" type="button">Купить</button>
+          </div>
+        </li>
+        <li class="receipts__item">
+          <div class="receipts__card">
+            <a class="receipts__card-link" href="#">
+              <img class="receipts__card-image" src="img/54005-TU-154-China.jpg" width="275" alt="">
+            </a>
+            <div class="receipts__info">
+              <a class="receipts__info-link" href="#">
+                <p class="receipts__info-name">Туполев Ту-134УБЛ</p>
+                <p class="receipts__info-scale">1:400 Panda</p>
+              </a>
+            </div>
+            <button class="receipts__button" type="button">Купить</button>
+          </div>
+        </li>
+        <li class="receipts__item">
+          <div class="receipts__card">
+            <a class="receipts__card-link" href="#">
+              <img class="receipts__card-image" src="img/AF1-AN-225.jpg" width="275" alt="">
+            </a>
+            <div class="receipts__info">
+              <a class="receipts__info-link" href="#">
+                <p class="receipts__info-name">Антонов Ан-225 "Мрия"</p>
+                <p class="receipts__info-scale">1:400 AF1</p>
+              </a>
+            </div>
+            <button class="receipts__button" type="button">Купить</button>
+          </div>
+        </li>
+        <li class="receipts__item">
+          <div class="receipts__card">
+            <a class="receipts__card-link" href="#">
+              <img class="receipts__card-image" src="img/GJSBI2004.jpg" width="275" alt="">
+            </a>
+            <div class="receipts__info">
+              <a class="receipts__info-link" href="#">
+                <p class="receipts__info-name">Boeing 737-800BCF</p>
+                <p class="receipts__info-scale">1:400 Gemini Jets</p>
+              </a>
+            </div>
+            <button class="receipts__button" type="button">Купить</button>
+          </div>
+        </li>
+        <li class="receipts__item">
+          <div class="receipts__card">
+            <a class="receipts__card-link" href="#">
+              <img class="receipts__card-image" src="img/XX20108-AEROFLOT-A321NEO_1.jpg" width="275" alt="">
+            </a>
+            <div class="receipts__info">
+              <a class="receipts__info-link" href="#">
+                <p class="receipts__info-name">Airbus A321neo</p>
+                <p class="receipts__info-scale">1:200 JC Wings</p>
+              </a>
+            </div>
+            <button class="receipts__button" type="button">Купить</button>
+          </div>
+        </li>
+        <li class="receipts__item">
+          <div class="receipts__card">
+            <a class="receipts__card-link" href="#">
+              <img class="receipts__card-image" src="img/XX4976-boeing-737-400-aeroflot_1.jpg" width="275" alt="">
+            </a>
+            <div class="receipts__info">
+              <a class="receipts__info-link" href="#">
+                <p class="receipts__info-name">Boeing 737-400</p>
+                <p class="receipts__info-scale">1:400 JC Wings</p>
+              </a>
+            </div>
+            <button class="receipts__button" type="button">Купить</button>
+          </div>
+        </li>
+      </ul>
+      <a class="receipts__all-models" href="#">Посмотреть все модели</a>
+    </section>
+
+    <section class="leaders-sale">
+      <h2 class="leaders-sale__header">Лидеры продаж</h2>
+      <p class="leaders-sale__text">Самые популярные коллекционные модели самолетов за последние 3 месяца.</p>
+
+      <div class="leaders-sale__issues">
+        <h3 class="issues__header">Выпуски ближайших месяцев:</h3>
+        <ul class="issues__list">
+          <li class="issues__item">
+            <a href="#">Апрель 2023</a>
+          </li>
+          <li class="issues__item">
+            <a href="#">Май 2023</a>
+          </li>
+          <li class="issues__item">
+            <a href="#">Июнь 2023</a>
+          </li>
+          <li class="issues__item">
+            <a href="#">Июль 2023</a>
+          </li>
+          <li class="issues__item">
+            <a href="#">Август 2023</a>
+          </li>
+        </ul>
+      </div>
+
+      <ul class="leaders-sale__list">
+        <li class="leaders-sale__item">
+          <div class="leaders-sale__card">
+            <a class="leaders-sale__card-link" href="#">
+              <img class="leaders-sale__card-image" src="img/leaders/518413.jpg" alt="">
+            </a>
+            <div class="leaders-sale__info">
+              <a href="#" class="leaders-sale__info-link">
+                <p class="leaders-sale__info-name">Антонов Ан-124</p>
+                <p class="leaders-sale__info-scale">1:500 Herpa (Херпа)</p>
+              </a>
+            </div>
+            <button class="leaders-sale__button" type="button">Купить</button>
+          </div>
+        </li>
+        <li class="leaders-sale__item">
+          <div class="leaders-sale__card">
+            <a class="leaders-sale__card-link" href="#">
+              <img class="leaders-sale__card-image" src="img/leaders/A2052-A321-Ural-Airlines_2.jpg" alt="">
+            </a>
+            <div class="leaders-sale__info">
+              <a href="#" class="leaders-sale__info-link">
+                <p class="leaders-sale__info-name">Airbus A321</p>
+                <p class="leaders-sale__info-scale">1:200 AviaBoss</p>
+              </a>
+            </div>
+            <button class="leaders-sale__button" type="button">Купить</button>
+          </div>
+        </li>
+        <li class="leaders-sale__item">
+          <div class="leaders-sale__card">
+            <a class="leaders-sale__card-link" href="#">
+              <img class="leaders-sale__card-image" src="img/leaders/LH2249-A319-aurora_11.jpg" alt="">
+            </a>
+            <div class="leaders-sale__info">
+              <a href="#" class="leaders-sale__info-link">
+                <p class="leaders-sale__info-name">Airbus A319</p>
+                <p class="leaders-sale__info-scale">1:200 JC Wings</p>
+              </a>
+            </div>
+            <button class="leaders-sale__button" type="button">Купить</button>
+          </div>
+        </li>
+        <li class="leaders-sale__item">
+          <div class="leaders-sale__card">
+            <a class="leaders-sale__card-link" href="#">
+              <img class="leaders-sale__card-image" src="img/leaders/YPS_G2UTA618.jpg" alt="">
+            </a>
+            <div class="leaders-sale__info">
+              <a href="#" class="leaders-sale__info-link">
+                <p class="leaders-sale__info-name">Boeing 737-800</p>
+                <p class="leaders-sale__info-scale">1:200 Gemini Jets</p>
+              </a>
+            </div>
+            <button class="leaders-sale__button" type="button">Купить</button>
+          </div>
+        </li>
+        <li class="leaders-sale__item">
+          <div class="leaders-sale__card">
+            <a class="leaders-sale__card-link" href="#">
+              <img class="leaders-sale__card-image" src="img/leaders/YPS_GJSTD777-chrome-stand-1.jpg" alt="">
+            </a>
+            <div class="leaders-sale__info">
+              <a href="#" class="leaders-sale__info-link">
+                <p class="leaders-sale__info-name">Хромированная подставка 1:400</p>
+                <p class="leaders-sale__info-scale">1:400 Gemini Jets</p>
+              </a>
+            </div>
+            <button class="leaders-sale__button" type="button">Купить</button>
+          </div>
+        </li>
+        <li class="leaders-sale__item">
+          <div class="leaders-sale__card">
+            <a class="leaders-sale__card-link" href="#">
+              <img class="leaders-sale__card-image" src="img/leaders/YPS_Panda-Model-202109-Tu-134A.jpg" alt="">
+            </a>
+            <div class="leaders-sale__info">
+              <a href="#" class="leaders-sale__info-link">
+                <p class="leaders-sale__info-name">Туполев Ту-134А</p>
+                <p class="leaders-sale__info-scale">1:400 Panda</p>
+              </a>
+            </div>
+            <button class="leaders-sale__button" type="button">Купить</button>
+          </div>
+        </li>
+      </ul>
+      <a class="leaders-sale__all-models" href="#">Посмотреть все популярные модели</a>
+    </section>
+
+    <section class="soon">
+      <h2 class="soon__header">Скоро в продаже</h2>
+      <p class="soon__text">Новейшие модели пассажирских самолетов, поступление ожидается в ближайшее время.</p>
+
+      <div class="soon__scale-models">
+        <h3 class="scale-models__header">Масштабные модели самолетов:</h3>
+        <ul class="scale-models__list">
+          <li class="scale-models__item">
+            <a href="#">Авиакомпании России</a>
+          </li>
+          <li class="scale-models__item">
+            <a href="#">Самолеты Аэрофлота</a>
+          </li>
+          <li class="scale-models__item">
+            <a href="#">Советские самолеты</a>
+          </li>
+          <li class="scale-models__item">
+            <a href="#">Из полированного металла</a>
+          </li>
+          <li class="scale-models__item">
+            <a href="#">Нестандартные окраски</a>
+          </li>
+        </ul>
+      </div>
+
+      <ul class="soon__list">
+        <li class="soon__item">
+          <div class="soon__card">
+            <a class="soon__card-link" href="#">
+              <img class="soon__card-image" src="img/soon/G2ADB1225.jpg" alt="">
+            </a>
+            <div class="soon__info">
+              <a href="#" class="soon__info-link">
+                <p class="soon__info-name">Антонов Ан-225</p>
+                <p class="soon__info-scale">1:200 Gemini Jets</p>
+              </a>
+            </div>
+            <button class="soon__button" type="button">Заказать</button>
+          </div>
+        </li>
+        <li class="soon__item">
+          <div class="soon__card">
+            <a class="soon__card-link" href="#">
+              <img class="soon__card-image" src="img/soon/IF35901119-A350-900_0.jpg" alt="">
+            </a>
+            <div class="soon__info">
+              <a href="#" class="soon__info-link">
+                <p class="soon__info-name">Airbus A350-900 "Carbon Fiber"</p>
+                <p class="soon__info-scale">1:200 Inflight 200</p>
+              </a>
+            </div>
+            <button class="soon__button" type="button">Заказать</button>
+          </div>
+        </li>
+        <li class="soon__item">
+          <div class="soon__card">
+            <a class="soon__card-link" href="#">
+              <img class="soon__card-image" src="img/soon/IF742QF0522-boeing-747-200_1.jpg" alt="">
+            </a>
+            <div class="soon__info">
+              <a href="#" class="soon__info-link">
+                <p class="soon__info-name">Boeing 747-200</p>
+                <p class="soon__info-scale">1:200 Inflight 200</p>
+              </a>
+            </div>
+            <button class="soon__button" type="button">Заказать</button>
+          </div>
+        </li>
+        <li class="soon__item">
+          <div class="soon__card">
+            <a class="soon__card-link" href="#">
+              <img class="soon__card-image" src="img/soon/IFE8USAF1221_1.jpg" alt="">
+            </a>
+            <div class="soon__info">
+              <a href="#" class="soon__info-link">
+                <p class="soon__info-name">Boeing E-8C J-Stars</p>
+                <p class="soon__info-scale">1:200 Inflight 200</p>
+              </a>
+            </div>
+            <button class="soon__button" type="button">Заказать</button>
+          </div>
+        </li>
+        <li class="soon__item">
+          <div class="soon__card">
+            <a class="soon__card-link" href="#">
+              <img class="soon__card-image" src="img/soon/herpa-571524-il-62m-1971.jpg" alt="">
+            </a>
+            <div class="soon__info">
+              <a href="#" class="soon__info-link">
+                <p class="soon__info-name">Ильюшин Ил-62М</p>
+                <p class="soon__info-scale">1:200 Herpa (Херпа)</p>
+              </a>
+            </div>
+            <button class="soon__button" type="button">Заказать</button>
+          </div>
+        </li>
+        <li class="soon__item">
+          <div class="soon__card">
+            <a class="soon__card-link" href="#">
+              <img class="soon__card-image" src="img/soon/IF752HY0522-boeing-757-200_1.jpg" alt="">
+            </a>
+            <div class="soon__info">
+              <a href="#" class="soon__info-link">
+                <p class="soon__info-name">Boeing 757-200</p>
+                <p class="soon__info-scale">1:200 Inflight 200</p>
+              </a>
+            </div>
+            <button class="soon__button" type="button">Заказать</button>
+          </div>
+        </li>
+      </ul>
+      <a class="soon__all-models" href="#">Посмотреть все релизы</a>
+    </section>
+
+    <section class="reviews">
+
+      <h2 class="reviews__header">Обзоры готовых моделей пассажирских самолетов</h2>
+
+      <ul class="reviews__list">
+        <li class="reviews__item">
+          <div class="reviews__card">
+            <div class="reviews__card-container">
+              <a href="#" class="reviews__card-image">
+                <img width="300" src="img/reviews/221309_LH2298-b377sgt-super-guppy_4.jpg" alt="">
+              </a>
+              <a href="#" class="reviews__card-link reviews__card-info">Модель Aero Spacelines 337SGT Super Guppy
+                Turbine от JC Wingsk</a>
+            </div>
+            <div class="reviews__info">
+              <time datetime="2023-03-04">04 Марта 2023 г.</time>
+              <a href="#" class="reviews__info-link">Артем Лапин</a>
+              <p class="reviews__info-text">Захотелось написать про модель самолета Aero Spacelines 337SGT-201F Guppy
+                "Airbus Skylink 1" в масштабе 1:200 от китайского производителя JC Wings и я не стал себя
+                сдерживать.Прежде всего, п...</p>
+            </div>
+          </div>
+        <li class="reviews__item">
+          <div class="reviews__card">
+            <div class="reviews__card-container">
+              <a href="#" class="reviews__card-image">
+                <img width="300" src="img/reviews/220956_royal-flight-boeing-777-300-4.jpg" alt="">
+              </a>
+              <a href="#" class="reviews__card-link reviews__card-info">JC Wings: Boeing 777-300ER Royal Flight в
+                масштабе 1:400</a>
+            </div>
+            <div class="reviews__info">
+              <time datetime="2023-02-23">23 февраля 2023 г.</time>
+              <a href="#" class="reviews__info-link">Алексей Марчуков</a>
+              <p class="reviews__info-text">В сегодняшнем обзоре хочу показать интересную модель от JC Wings, выпущенную
+                чуть более года назад - в конце 2021 года. Интересна модель тем, что, во-первых, прототипом был взят
+                лайнер российской авиа...</p>
+            </div>
+          </div>
+        </li>
+        <li class="reviews__item">
+          <div class="reviews__card">
+            <div class="reviews__card-container">
+              <a href="#" class="reviews__card-image">
+                <img width="300" src="img/reviews/221858_20230322_130421.jpg" alt="">
+              </a>
+              <a href="#" class="reviews__card-link reviews__card-info">Lockheed F-104 "Starfighter"</a>
+            </div>
+            <div class="reviews__info">
+              <time datetime="2023-03-24">24 марта 2023 г.</time>
+              <a href="#" class="reviews__info-link">Константин Матеренко</a>
+              <p class="reviews__info-text">Доброго времени суток дорогие друзья! Сегодня хочу представить сравнительный
+                обзор истребителей-перехватчиков Lockheed «Starfighter» F-104C U.S. Air force из 479 крыла тактических
+                истребителей, авиаба..</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <a class="reviews__other" href="#">Смотреть обзоры других моделей</a>
+
+    </section>
+
+    <section class="news">
+      <h2 class="news__header">Новости магазина</h2>
+
+      <div class="news__container">
+        <div>
+          <ul class="news__list">
+            <li class="news__item">
+              <time datetime="2023-02-27">27 февраля 2023 г.</time>
+              <a href="#">Новые модели самолетов Ан-32 от AviaBoss</a>
+            </li>
+            <li class="news__item">
+              <time datetime="2023-01-30">30 января 2023 г.</time>
+              <a href="#">Большое поступление моделей самолетов JC Wings и GeminiJets</a>
+            </li>
+            <li class="news__item">
+              <time datetime="2023-01-12">12 января 2023 г.</time>
+              <a href="#">В продаже новые модели Panda - впервые Ту-134УБЛ и Ту-214</a>
+            </li>
+          </ul>
+
+          <a class="news__link" href="#">Все модельные новости</a>
+
+        </div>
+
+        <div class="news__subscription-container">
+
+          <p class="news__text-subscription">Подпишитесь на новости магазина</p>
+          <p class="news__text">Чтобы сразу узнавать о новых поступлениях моделей, новых опубликованных обзорах моделей,
+            специальных акциях и распродажах магазина.</p>
+          <p class="news__text">
+            <b class="news__text-attention">Внимание!</b>Оформляя подписку, Вы подтверждаете свое согласие со всеми
+            пунктами
+            <a class="news__link-attention" href="#">СОГЛАШЕНИЯ О КОНФИДЕНЦИАЛЬНОСТИ</a>
+          </p>
+
+          <form class="news__form" action="#" method="post">
+            <input class="news__form-input" type="text" placeholder="Введите свой e-mail">
+            <button class="news__form-button" type="submit">Подписаться</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="choise">
+      <dl class="choise-class">
+        <dt class="choise-class__item">
+          <a href="#">Модели-новинки</a>
+        </dt>
+        <dt class="choise-class__item">
+          <a href="#">Скоро в продаже</a>
+        </dt>
+        <dt class="choise-class__item">
+          <a href="#">Популярные модели</a>
+        </dt>
+        <dt class="choise-class__item">
+          <a href="#">Модели со скидкой</a>
+        </dt>
+        <dt class="choise-class__item">
+          <a href="#">Модели военных самолетов</a>
+        </dt>
+
+        <dt class="choise-class__header choise-class__header--budget">
+          <a id="choise-class__link--budget" class="choise-class__link--closed" href="#">Бюджетные модели</a>
+        </dt>
+        <dd class="choise-class__container">
+          <ul class="choise-class__list choise-class__list--budget">
+            <li class="choise-class__item choise-class__item--budget">
+              <a href="#">Herpa Snap-Fit</a>
+            </li>
+          </ul>
+        </dd>
+
+        <dt class="choise-class__header choise-class__header--office">
+          <a id="choise-class__link--office" class="choise-class__link--closed" href="#">Офисные модели</a>
+        </dt>
+        <dd class="choise-class__container">
+          <ul class="choise-class__list choise-class__list--office">
+            <li class="choise-class__item choise-class__item--office">
+              <a href="#">Арсенал</a>
+            </li>
+          </ul>
+        </dd>
+
+        <dt class="choise-class__header choise-class__header--collection">
+          <a id="choise-class__link--collection" class="choise-class__link--closed" href="#">Коллекционные модели</a>
+        </dt>
+
+        <dd class="choise-class__container">
+          <ul class="choise-class__list choise-class__list--collection">
+            <li class="choise-class__item choise-class__item--collection">
+              <a href="#">AviaBoss</a>
+            </li>
+            <li class="choise-class__item choise-class__item--collection">
+              <a href="#">Gemini Jets</a>
+            </li>
+            <li class="choise-class__item choise-class__item--collection">
+              <a href="#">JC Wings</a>
+            </li>
+            <li class="choise-class__item choise-class__item--collection">
+              <a href="#">Inflight 200</a>
+            </li>
+            <li class="choise-class__item choise-class__item--collection">
+              <a href="#">JFox</a>
+            </li>
+            <li class="choise-class__item choise-class__item--collection">
+              <a href="#">AF1</a>
+            </li>
+            <li class="choise-class__item choise-class__item--collection">
+              <a href="#">Herpa (Херпа)</a>
+            </li>
+            <li class="choise-class__item choise-class__item--collection">
+              <a href="#">Hogan (Хоган)</a>
+            </li>
+            <li class="choise-class__item choise-class__item--collection">
+              <a href="#">NG Model</a>
+            </li>
+            <li class="choise-class__item choise-class__item--collection">
+              <a href="#">Panda</a>
+            </li>
+            <li class="choise-class__item choise-class__item--collection">
+              <a href="#">Yu Model</a>
+            </li>
+            <li class="choise-class__item choise-class__item--collection">
+              <a href="#">Retro Models</a>
+            </li>
+          </ul>
+        </dd>
+
+        <dt class="choise-class__header choise-class__header--airports">
+          <a id="choise-class__link--airports" class="choise-class__link--closed" href="#">Модели аэропортов</a>
+        </dt>
+        <dd class="choise-class__container">
+          <ul class="choise-class__list choise-class__list--airports">
+            <li class="choise-class__item choise-class__item--airports">
+              <a href="#">1:200 Herpa</a>
+            </li>
+            <li class="choise-class__item choise-class__item--airports">
+              <a href="#">1:200 JC Wings</a>
+            </li>
+            <li class="choise-class__item choise-class__item--airports">
+              <a href="#">1:400 Herpa</a>
+            </li>
+            <li class="choise-class__item choise-class__item--airports">
+              <a href="#">1:400 GeminiJets</a>
+            </li>
+            <li class="choise-class__item choise-class__item--airports">
+              <a href="#">1:400 JC Wings</a>
+            </li>
+          </ul>
+        </dd>
+
+        <dt id="choise-class__link--collector"
+          class="choise-class__header choise-class__header--collector choise-class__link--closed">Коллекционеру</dt>
+        <dd class="choise-class__container">
+          <ul class="choise-class__list choise-class__list--collector">
+            <li class="choise-class__item choise-class__item--collector">
+              <a href="#">Обзоры моделей</a>
+            </li>
+            <li class="choise-class__item choise-class__item--collector">
+              <a href="#">Новости магазина</a>
+            </li>
+            <li class="choise-class__item choise-class__item--collector">
+              <a href="#">Анонсы новинок</a>
+            </li>
+          </ul>
+        </dd>
+
+        <dt class="choise-class__header choise-class--only-desktop">
+          Самолеты по эпохам:
+        </dt>
+        <dd class="choise-class__container choise-class--only-desktop">
+          <ul class="choise-class__list">
+            <li class="choise-class__item choise-class__item--other">
+              <a href="#">1920-1940х гг.</a>
+            </li>
+            <li class="choise-class__item choise-class__item--other">
+              <a href="#">1950-1960х гг.</a>
+            </li>
+            <li class="choise-class__item choise-class__item--other">
+              <a href="#">1970-1980х гг.</a>
+            </li>
+            <li class="choise-class__item choise-class__item--other">
+              <a href="#">1990-2000х гг.</a>
+            </li>
+          </ul>
+        </dd>
+
+        <dt class="choise-class__header choise-class--only-desktop">
+          Популярные масштабы:
+        </dt>
+
+        <dd class="choise-class__container choise-class--only-desktop">
+          <ul class="choise-class__list">
+            <li class="choise-class__item choise-class__item--other">
+              <a href="#">1:200</a>
+            </li>
+            <li class="choise-class__item choise-class__item--other">
+              <a href="#">1:400</a>
+            </li>
+            <li class="choise-class__item choise-class__item--other">
+              <a href="#">1:500</a>
+            </li>
+          </ul>
+        </dd>
+
+        <dt class="choise-class__header choise-class--only-desktop">
+          Популярные марки самолетов:
+        </dt>
+
+        <dd class="choise-class__container choise-class--only-desktop">
+          <ul class="choise-class__list">
+            <li class="choise-class__item choise-class__item--other">
+              <a href="#">Airbus</a>
+            </li>
+            <li class="choise-class__item choise-class__item--other">
+              <a href="#">Boeing</a>
+            </li>
+            <li class="choise-class__item choise-class__item--other">
+              <a href="#">Илюшин</a>
+            </li>
+            <li class="choise-class__item choise-class__item--other">
+              <a href="#">Туполев</a>
+            </li>
+          </ul>
+        </dd>
+
+        <dt class="choise-class__header choise-class--only-desktop">
+          Популярные авиакомпании:
+        </dt>
+
+        <dd class="choise-class__container choise-class--only-desktop">
+          <ul class="choise-class__list">
+            <li class="choise-class__item choise-class__item--other">
+              <a href="#">Аэрофлот</a>
+            </li>
+            <li class="choise-class__item choise-class__item--other">
+              <a href="#">Трансаэро</a>
+            </li>
+            <li class="choise-class__item choise-class__item--other">
+              <a href="#">S7 Airlines</a>
+            </li>
+            <li class="choise-class__item choise-class__item--other">
+              <a href="#">UTair</a>
+            </li>
+            <li class="choise-class__item choise-class__item--other">
+              <a href="#">Россия</a>
+            </li>
+            <li class="choise-class__item choise-class__item--other">
+              <a href="#">Air France</a>
+            </li>
+            <li class="choise-class__item choise-class__item--other">
+              <a href="#">Lufthansa</a>
+            </li>
+            <li class="choise-class__item choise-class__item--other">
+              <a href="#">British Airways</a>
+            </li>
+          </ul>
+        </dd>
+
+        <div class="choise-class--only-desktop choise-class__block">
+          <div class="choise-class__block-container">
+            <a class="choise-class__block-link" href="#">Самолеты Аэрфлота</a>
+            <p class="choise-class__block-text">Масштабные модели лайнеров Аэрофлота различных эпох</p>
+          </div>
+          <img width="73" height="73" src="img/bloks/Aeroflot.gif" alt="">
+        </div>
+
+        <div class="choise-class--only-desktop choise-class__block">
+          <div class="choise-class__block-container">
+            <a class="choise-class__block-link" href="#">Airbus A380</a>
+            <p class="choise-class__block-text"> Много моделей крупнейшего в мире авиалайнера</p>
+          </div>
+          <img width="73" height="73" src="img/bloks/A380.jpg" alt="">
+        </div>
+      </dl>
+
+      <button class="choise__close-button" type="button"></button>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <ul class="footer__link-list">
+      <li class="footer__link-item">
+        <a href="#" class="footer__link">О нас</a>
+      </li>
+      <li class="footer__link-item">
+        <a href="#" class="footer__link">Связаться с нами</a>
+      </li>
+      <li class="footer__link-item">
+        <a href="#" class="footer__link">Правила торговли</a>
+      </li>
+      <li class="footer__link-item">
+        <a href="#" class="footer__link">Карта сайта</a>
+      </li>
+    </ul>
+    <p class="footer__copyright">©2010-2023 ООО "Аминта Маркет"</p>
+  </footer>
+  <script src="./js/menu.js"></script>
+</body>
+
+</html>

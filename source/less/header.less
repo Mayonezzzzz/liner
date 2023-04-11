@@ -1,0 +1,246 @@
+.header__logo-container {
+  background-color: @basic-black;
+  padding: 10px;
+  min-width: 110px;
+
+
+}
+
+.header__logo-wrapper {
+  @media (min-width: @tablet-width) {
+    padding: 20px;
+    min-height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 70px;
+    flex-direction: row;
+    width: 1100px;
+    margin: 0 auto;
+  }
+
+}
+
+.social-list__logo {
+  fill: @basic-white;
+}
+
+.header__link-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: @desktop-width) {
+    width: 270px;
+  }
+}
+
+.header__social-container {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: @desktop-width) {
+    width: 1010px;
+    margin: 0 auto;
+  }
+}
+
+.header__menu-toggle {
+  display: block;
+  width: 40px;
+  height: 25px;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.header__menu-toggle--closed {
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 40px;
+      height: 3px;
+      background-color: @basic-white;
+      top: 31px;
+      right: 10px;
+      box-shadow: 0 10px 0 0 @basic-white, 0 20px 0 0 @basic-white;
+
+      @media (min-width: @tablet-width) {
+        top: 41px;
+        right: 20px;
+      }
+    }
+
+    &:hover::before {
+      background-color: @link-hover;
+      box-shadow: 0 10px 0 0 @link-hover, 0 20px 0 0 @link-hover;
+    }
+
+    &:active::before {
+      background-color: @link-hover-opacity;
+      box-shadow: 0 10px 0 0 @link-hover-opacity, 0 20px 0 0 @link-hover-opacity;
+    }
+
+}
+
+.header__menu-toggle--opened {
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    width: 29px;
+    height: 3px;
+    background-color: @basic-white;
+    right: 10px;
+    top: 31px;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    background-color: @link-hover;
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: @link-hover-opacity;
+  }
+}
+
+.header__social-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 100px;
+  justify-content: center;
+
+  @media (min-width: @desktop-width) {
+    margin-left: 75px;
+  }
+}
+
+.social-list__item {
+  @media (min-width: @tablet-width) {
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+}
+
+.social-list__logo {
+  width: 65%;
+  height: 65%;
+
+  &:hover {
+    fill: @link-hover;
+  }
+
+  &:active {
+    fill: @link-hover-opacity;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 85%;
+    height: 85%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.header__phone {
+  font-size: 0.7em;
+  color: @basic-white;
+  text-decoration: none;
+
+  &:hover {
+    color: @link-hover;
+  }
+
+  &:active {
+    color: @link-hover-opacity;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 1.1em;
+  }
+
+  @media (min-width: @desktop-width) {
+    align-self: center;
+  }
+}
+
+.header__navigation-wrapper {
+  background-color: @basic-darkgrey;
+}
+
+.header__navigation-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1040px;
+    margin: 0 auto;
+  }
+}
+
+.header__navigation-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  box-shadow: 0 1px 0 #000,inset 0 1px 0 rgba(255,255,255,.15);
+  margin-bottom: 1px;
+
+  @media (min-width: @desktop-width) {
+    width: 16%;
+    box-shadow: none;
+    height: 60px;
+  }
+
+  a {
+    text-decoration: none;
+    color: @basic-grey;
+    height: 25px;
+    font-size: 0.9em;
+    width: 100%;
+    text-align: center;
+
+    &:hover {
+      color: @basic-blue;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: auto;
+    }
+  }
+}
+
